@@ -1,0 +1,9 @@
+*.~*
+/__recovery/
+/__history/
+/Android/
+/Win32/
+/Win64/
+*.groupproj.local
+*.identcache
+*.dproj.local
