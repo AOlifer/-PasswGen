@@ -4,9 +4,12 @@ object fMain: TfMain
   Caption = #1043#1077#1085#1077#1088#1072#1090#1086#1088' '#1087#1072#1088#1086#1083#1077#1081
   ClientHeight = 480
   ClientWidth = 768
+  Position = DesktopCenter
+  Visible = True
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
+  OnKeyDown = FormKeyDown
   DesignerMasterStyle = 0
   object btnGenerate: TButton
     Position.X = 512.000000000000000000

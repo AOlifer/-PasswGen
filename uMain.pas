@@ -39,6 +39,8 @@ type
     procedure rbClick(Sender: TObject);
     procedure chClick(Sender: TObject);
     function LoadAlphabet: boolean;
+    procedure FormKeyDown(Sender: TObject; var Key: Word; var KeyChar: Char;
+      Shift: TShiftState);
   private
     { Private declarations }
   public
@@ -176,6 +178,22 @@ begin
   eStrLower.Enabled := chStrLower.IsChecked;
   eStrNumbs.Enabled := chStrNumbs.IsChecked;
   eStrChars.Enabled := chStrChars.IsChecked;
+end;
+
+procedure TfMain.FormKeyDown(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);
+var S :TStringList;
+begin
+  if key = 112 then begin
+    S := TStringList.Create;
+    try
+      S.Add('Все вопросы по работе программы:');
+      S.Add('AOlifer@yahoo.com    +7 (921) 4290915');
+      S.Add('© AOlifer 2022');
+      showmessage(S.Text);
+    finally
+     S.Free;
+    end;
+  end;
 end;
 
 end.
