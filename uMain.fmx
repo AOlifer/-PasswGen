@@ -74,11 +74,17 @@ object fMain: TfMain
       Visible = False
     end
     object eNewPassword: TEdit
-      Touch.InteractiveGestures = [LongTap, DoubleTap]
-      Align = Client
-      TabOrder = 1
-      TextSettings.Font.Size = 16.000000000000000000
+    object eNewPassword: TMemo
+      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+      DataDetectorTypes = []
+      Lines.Strings = (
+        #1085#1072#1084#1080#1090#1077' "'#1054#1073#1085#1086#1074#1080#1090#1100' '#1087#1072#1088#1086#1083#1100'"')
+      StyledSettings = [Family, FontColor]
+      TextSettings.Font.Size = 18.000000000000000000
       TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.HorzAlign = Center
+      TextSettings.WordWrap = True
+      Align = Client
       Margins.Left = 5.000000000000000000
       Margins.Top = 10.000000000000000000
       Margins.Right = 5.000000000000000000
@@ -293,8 +299,13 @@ object fMain: TfMain
             TextSettings.WordWrap = True
             OnChange = chClick
           end
-          object eStrUpper: TEdit
-            Touch.InteractiveGestures = [LongTap, DoubleTap]
+          object eStrUpper: TMemo
+            Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+            CharCase = ecUpperCase
+            DataDetectorTypes = []
+            Lines.Strings = (
+              'ABCDEFGHIJKLMNOPQRSTUVWXYZ')
+            TextSettings.WordWrap = True
             Align = Client
             TabOrder = 4
             FilterChar = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
@@ -309,8 +320,13 @@ object fMain: TfMain
             TextPrompt = #1051#1072#1090#1080#1085#1085#1080#1094#1072' ('#1074#1077#1088#1093#1085#1080#1081' '#1088#1077#1075#1080#1089#1090#1088')'
             CharCase = ecUpperCase
           end
-          object eStrLower: TEdit
-            Touch.InteractiveGestures = [LongTap, DoubleTap]
+          object eStrLower: TMemo
+            Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+            CharCase = ecLowerCase
+            DataDetectorTypes = []
+            Lines.Strings = (
+              'abcdefghijklmnopqrstuvwxyz')
+            TextSettings.WordWrap = True
             Align = Client
             TabOrder = 3
             FilterChar = 'abcdefghijklmnopqrstuvwxyz'
@@ -325,8 +341,13 @@ object fMain: TfMain
             TextPrompt = #1051#1072#1090#1080#1085#1085#1080#1094#1072' ('#1085#1080#1078#1085#1080#1081' '#1088#1077#1075#1080#1089#1090#1088')'
             CharCase = ecLowerCase
           end
-          object eStrNumbs: TEdit
-            Touch.InteractiveGestures = [LongTap, DoubleTap]
+          object eStrNumbs: TMemo
+            Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+            DataDetectorTypes = []
+            KeyboardType = NumberPad
+            Lines.Strings = (
+              '0123456789')
+            TextSettings.WordWrap = True
             Align = Client
             TabOrder = 2
             FilterChar = '0123456789'
@@ -340,8 +361,12 @@ object fMain: TfMain
             Size.PlatformDefault = False
             TextPrompt = #1094#1080#1092#1088#1099' '#1086#1090' 0 '#1076#1086' 9'
           end
-          object eStrChars: TEdit
-            Touch.InteractiveGestures = [LongTap, DoubleTap]
+          object eStrChars: TMemo
+            Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+            DataDetectorTypes = []
+            Lines.Strings = (
+              '@#$&*%_')
+            TextSettings.WordWrap = True
             Align = Client
             TabOrder = 1
             Text = '@#$&*%_'

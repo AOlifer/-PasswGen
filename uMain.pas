@@ -14,7 +14,6 @@ type
     ePswLength: TSpinBox;
     pPswEdit: TGridPanelLayout;
     eOldPassword: TEdit;
-    eNewPassword: TEdit;
     pAlphabet: TGroupBox;
     lAlphabet: TGridPanelLayout;
     lStandart: TGridPanelLayout;
@@ -26,14 +25,15 @@ type
     chStrLower: TCheckBox;
     chStrNumbs: TCheckBox;
     chStrChars: TCheckBox;
-    eStrUpper: TEdit;
-    eStrLower: TEdit;
-    eStrNumbs: TEdit;
-    eStrChars: TEdit;
     eManual: TMemo;
     pBottom: TPanel;
     lbAlhabetCnt: TLabel;
     lbPswLength: TLabel;
+    eStrUpper: TMemo;
+    eStrLower: TMemo;
+    eStrNumbs: TMemo;
+    eStrChars: TMemo;
+    eNewPassword: TMemo;
     procedure btnGenerateClick(Sender: TObject);
     procedure rbStandartDblClick(Sender: TObject);
     procedure rbClick(Sender: TObject);
