@@ -91,14 +91,16 @@ begin
     //Добавляем первый символ из Верхнего или Нижнего регистра
     p[1] := (str_UPPER+str_LOWER)[Random(Length(str_UPPER+str_LOWER)) + 1];
     inc := inc + 1;
-    //Добавляем символ из Верхнего регистра
-    if chStrUpper.IsChecked then add_random_char(v_UPPER);
-    //Добавляем символ из Нижнего регистра
-    if chStrLower.IsChecked then add_random_char(v_LOWER);
-    //Добавляем символ из Набора цифр
-    if chStrNumbs.IsChecked then add_random_char(v_NUMBS);
-    //Добавляем символ из Набора спецсимволов (не может быть в начале пароля)
-    if chStrChars.IsChecked then add_random_char(str_CHARS);
+    if rbStandart.IsChecked then begin
+      //Добавляем символ из Верхнего регистра
+      if chStrUpper.IsChecked then add_random_char(v_UPPER);
+      //Добавляем символ из Нижнего регистра
+      if chStrLower.IsChecked then add_random_char(v_LOWER);
+      //Добавляем символ из Набора цифр
+      if chStrNumbs.IsChecked then add_random_char(v_NUMBS);
+      //Добавляем символ из Набора спецсимволов (не может быть в начале пароля)
+      if chStrChars.IsChecked then add_random_char(str_CHARS);
+    end;
     //заполняем массив случайными символами
     for i := (1 + inc) to psw_lenght do begin
       if p[i] = emp then
