@@ -399,6 +399,7 @@ object fMain: TfMain
         object eManual: TMemo
           Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
           DataDetectorTypes = []
+          TextSettings.WordWrap = True
           Align = Client
           Enabled = False
           Margins.Left = 5.000000000000000000
