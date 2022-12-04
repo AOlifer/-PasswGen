@@ -62,7 +62,7 @@ object fMain: TfMain
     object eOldPassword: TEdit
       Touch.InteractiveGestures = [LongTap, DoubleTap]
       Align = Client
-      TabOrder = 2
+      TabOrder = 1
       Margins.Left = 5.000000000000000000
       Margins.Top = 10.000000000000000000
       Margins.Right = 5.000000000000000000
@@ -73,7 +73,6 @@ object fMain: TfMain
       TextPrompt = #1074#1074#1077#1076#1080#1090#1077' '#1089#1090#1072#1088#1099#1081' '#1087#1072#1088#1086#1083#1100' '#1076#1083#1103' '#1089#1088#1072#1074#1085#1077#1085#1080#1103
       Visible = False
     end
-    object eNewPassword: TEdit
     object eNewPassword: TMemo
       Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
       DataDetectorTypes = []
@@ -86,13 +85,15 @@ object fMain: TfMain
       TextSettings.WordWrap = True
       Align = Client
       Margins.Left = 5.000000000000000000
-      Margins.Top = 10.000000000000000000
+      Margins.Top = 5.000000000000000000
       Margins.Right = 5.000000000000000000
-      Margins.Bottom = 10.000000000000000000
+      Margins.Bottom = 5.000000000000000000
       Size.Width = 263.000000000000000000
-      Size.Height = 52.500000000000000000
+      Size.Height = 62.500000000000000000
       Size.PlatformDefault = False
-      StyledSettings = [Family, FontColor]
+      TabOrder = 37
+      Viewport.Width = 259.000000000000000000
+      Viewport.Height = 58.500000000000000000
     end
   end
   object pAlphabet: TGroupBox
@@ -240,16 +241,16 @@ object fMain: TfMain
             end>
           RowCollection = <
             item
+              Value = 25.000000000000000000
+            end
+            item
+              Value = 24.999999999999970000
+            end
+            item
+              Value = 25.000000000000000000
+            end
+            item
               Value = 25.000000000000010000
-            end
-            item
-              Value = 24.999999999999980000
-            end
-            item
-              Value = 25.000000000000010000
-            end
-            item
-              Value = 25.000000000000020000
             end>
           object chStrUpper: TCheckBox
             Align = Client
@@ -258,7 +259,7 @@ object fMain: TfMain
             Size.Width = 130.000000000000000000
             Size.Height = 45.750000000000000000
             Size.PlatformDefault = False
-            TabOrder = 11
+            TabOrder = 7
             Text = #1051#1072#1090#1080#1085#1085#1080#1094#1072' ('#1074#1077#1088#1093#1085#1080#1081' '#1088#1077#1075#1080#1089#1090#1088')'
             TextSettings.WordWrap = True
             OnChange = chClick
@@ -270,7 +271,7 @@ object fMain: TfMain
             Size.Width = 130.000000000000000000
             Size.Height = 45.750000000000000000
             Size.PlatformDefault = False
-            TabOrder = 13
+            TabOrder = 9
             Text = #1051#1072#1090#1080#1085#1085#1080#1094#1072' ('#1085#1080#1078#1085#1080#1081' '#1088#1077#1075#1080#1089#1090#1088')'
             TextSettings.WordWrap = True
             OnChange = chClick
@@ -282,7 +283,7 @@ object fMain: TfMain
             Size.Width = 130.000000000000000000
             Size.Height = 45.750000000000000000
             Size.PlatformDefault = False
-            TabOrder = 12
+            TabOrder = 8
             Text = #1062#1080#1092#1088#1099' '#1086#1090' 0 '#1076#1086' 9'
             TextSettings.WordWrap = True
             OnChange = chClick
@@ -294,7 +295,7 @@ object fMain: TfMain
             Size.Width = 130.000000000000000000
             Size.Height = 45.750000000000000000
             Size.PlatformDefault = False
-            TabOrder = 10
+            TabOrder = 6
             Text = #1057#1087#1077#1094#1080#1072#1083#1100#1085#1099#1077' '#1089#1080#1084#1074#1086#1083#1099
             TextSettings.WordWrap = True
             OnChange = chClick
@@ -307,9 +308,6 @@ object fMain: TfMain
               'ABCDEFGHIJKLMNOPQRSTUVWXYZ')
             TextSettings.WordWrap = True
             Align = Client
-            TabOrder = 4
-            FilterChar = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-            Text = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
             Margins.Left = 5.000000000000000000
             Margins.Top = 5.000000000000000000
             Margins.Right = 5.000000000000000000
@@ -317,8 +315,9 @@ object fMain: TfMain
             Size.Width = 190.000000000000000000
             Size.Height = 35.750000000000000000
             Size.PlatformDefault = False
-            TextPrompt = #1051#1072#1090#1080#1085#1085#1080#1094#1072' ('#1074#1077#1088#1093#1085#1080#1081' '#1088#1077#1075#1080#1089#1090#1088')'
-            CharCase = ecUpperCase
+            TabOrder = 39
+            Viewport.Width = 170.000000000000000000
+            Viewport.Height = 31.800000000000000000
           end
           object eStrLower: TMemo
             Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
@@ -328,9 +327,6 @@ object fMain: TfMain
               'abcdefghijklmnopqrstuvwxyz')
             TextSettings.WordWrap = True
             Align = Client
-            TabOrder = 3
-            FilterChar = 'abcdefghijklmnopqrstuvwxyz'
-            Text = 'abcdefghijklmnopqrstuvwxyz'
             Margins.Left = 5.000000000000000000
             Margins.Top = 5.000000000000000000
             Margins.Right = 5.000000000000000000
@@ -338,8 +334,9 @@ object fMain: TfMain
             Size.Width = 190.000000000000000000
             Size.Height = 35.750000000000000000
             Size.PlatformDefault = False
-            TextPrompt = #1051#1072#1090#1080#1085#1085#1080#1094#1072' ('#1085#1080#1078#1085#1080#1081' '#1088#1077#1075#1080#1089#1090#1088')'
-            CharCase = ecLowerCase
+            TabOrder = 38
+            Viewport.Width = 186.000000000000000000
+            Viewport.Height = 31.800000000000000000
           end
           object eStrNumbs: TMemo
             Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
@@ -349,9 +346,6 @@ object fMain: TfMain
               '0123456789')
             TextSettings.WordWrap = True
             Align = Client
-            TabOrder = 2
-            FilterChar = '0123456789'
-            Text = '0123456789'
             Margins.Left = 5.000000000000000000
             Margins.Top = 5.000000000000000000
             Margins.Right = 5.000000000000000000
@@ -359,7 +353,9 @@ object fMain: TfMain
             Size.Width = 190.000000000000000000
             Size.Height = 35.750000000000000000
             Size.PlatformDefault = False
-            TextPrompt = #1094#1080#1092#1088#1099' '#1086#1090' 0 '#1076#1086' 9'
+            TabOrder = 36
+            Viewport.Width = 186.000000000000000000
+            Viewport.Height = 31.800000000000000000
           end
           object eStrChars: TMemo
             Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
@@ -368,8 +364,6 @@ object fMain: TfMain
               '@#$&*%_')
             TextSettings.WordWrap = True
             Align = Client
-            TabOrder = 1
-            Text = '@#$&*%_'
             Margins.Left = 5.000000000000000000
             Margins.Top = 5.000000000000000000
             Margins.Right = 5.000000000000000000
@@ -377,7 +371,9 @@ object fMain: TfMain
             Size.Width = 190.000000000000000000
             Size.Height = 35.750000000000000000
             Size.PlatformDefault = False
-            TextPrompt = #1089#1087#1077#1094#1080#1072#1083#1100#1085#1099#1077' '#1089#1080#1084#1074#1086#1083#1099
+            TabOrder = 37
+            Viewport.Width = 186.000000000000000000
+            Viewport.Height = 31.800000000000000000
           end
         end
       end
@@ -465,6 +461,7 @@ object fMain: TfMain
       Size.PlatformDefault = False
       TextSettings.WordWrap = False
       Text = #1052#1086#1097#1085#1086#1089#1090#1100' '#1072#1083#1092#1072#1074#1080#1090#1072':  0 '#1089#1080#1084#1074#1086#1083#1086#1074
+      Visible = False
       TabOrder = 0
     end
   end

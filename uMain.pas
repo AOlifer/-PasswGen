@@ -154,6 +154,7 @@ begin
   psw_lenght := StrToInt(ePswLength.Text);
   AlhabetCnt := Length(V_COMBS);
   eManual.Text := V_COMBS;
+  if not lbAlhabetCnt.Visible then lbAlhabetCnt.Visible := True;
   lbAlhabetCnt.Text := 'Мощность алфавита: ' + IntToStr(AlhabetCnt) + ' симв.';
   Result := True;
 end;
