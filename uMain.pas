@@ -10,30 +10,36 @@ uses
 
 type
   TfMain = class(TForm)
-    btnGenerate: TButton;
-    ePswLength: TSpinBox;
-    pPswEdit: TGridPanelLayout;
-    eOldPassword: TEdit;
+    pBottom: TPanel;
+    lbAlhabetCnt: TLabel;
+    lLeft: TLayout;
+    lMain: TLayout;
     pAlphabet: TGroupBox;
     lAlphabet: TGridPanelLayout;
     lStandart: TGridPanelLayout;
-    lManual: TGridPanelLayout;
-    rbManual: TRadioButton;
     rbStandart: TRadioButton;
     lCheckButtons: TGridPanelLayout;
     chStrUpper: TCheckBox;
     chStrLower: TCheckBox;
     chStrNumbs: TCheckBox;
     chStrChars: TCheckBox;
-    eManual: TMemo;
-    pBottom: TPanel;
-    lbAlhabetCnt: TLabel;
-    lbPswLength: TLabel;
     eStrUpper: TMemo;
     eStrLower: TMemo;
     eStrNumbs: TMemo;
     eStrChars: TMemo;
+    lManual: TGridPanelLayout;
+    rbManual: TRadioButton;
+    eManual: TMemo;
+    pPswEdit: TGridPanelLayout;
+    eOldPassword: TEdit;
     eNewPassword: TMemo;
+    btnGenerate: TButton;
+    Splitter1: TSplitter;
+    pParams: TGroupBox;
+    lParams: TGridPanelLayout;
+    lbPswLength: TLabel;
+    ePswLength: TSpinBox;
+    chFirst: TCheckBox;
     procedure btnGenerateClick(Sender: TObject);
     procedure rbStandartDblClick(Sender: TObject);
     procedure rbClick(Sender: TObject);
@@ -90,9 +96,11 @@ begin
     inc := 0;
     //очистка
     for i := 1 to max_lenght do p[i] := emp;
-    //Добавляем первый символ из Верхнего или Нижнего регистра
-    p[1] := (str_UPPER+str_LOWER)[Random(Length(str_UPPER+str_LOWER)) + 1];
-    inc := inc + 1;
+    if chFirst.IsChecked then begin
+      //Добавляем первый символ из Верхнего или Нижнего регистра
+      p[1] := (str_UPPER+str_LOWER)[Random(Length(str_UPPER + str_LOWER)) + 1];
+      inc := inc + 1;
+    end;
     if rbStandart.IsChecked then begin
       //Добавляем символ из Верхнего регистра
       if (chStrUpper.IsChecked and (eStrUpper.Text <> EmptyStr)) then add_random_char(v_UPPER);
