@@ -95,13 +95,13 @@ begin
     inc := inc + 1;
     if rbStandart.IsChecked then begin
       //Добавляем символ из Верхнего регистра
-      if chStrUpper.IsChecked then add_random_char(v_UPPER);
+      if (chStrUpper.IsChecked and (eStrUpper.Text <> EmptyStr)) then add_random_char(v_UPPER);
       //Добавляем символ из Нижнего регистра
-      if chStrLower.IsChecked then add_random_char(v_LOWER);
+      if (chStrLower.IsChecked and (eStrLower.Text <> EmptyStr)) then add_random_char(v_LOWER);
       //Добавляем символ из Набора цифр
-      if chStrNumbs.IsChecked then add_random_char(v_NUMBS);
+      if (chStrNumbs.IsChecked and (eStrNumbs.Text <> EmptyStr)) then add_random_char(v_NUMBS);
       //Добавляем символ из Набора спецсимволов (не может быть в начале пароля)
-      if chStrChars.IsChecked then add_random_char(str_CHARS);
+      if (chStrChars.IsChecked and (eStrChars.Text <> EmptyStr)) then add_random_char(str_CHARS);
     end;
     //заполняем массив случайными символами
     for i := (1 + inc) to psw_lenght do begin
